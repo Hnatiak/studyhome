@@ -19,13 +19,14 @@ body {
 table {
   border-collapse: collapse;
   width: 100%;
-  color: "#fff"
+  color: #fff;
+  table-layout: auto;
 }
 
 th {
   border: 1px solid #fff;
   padding: 8px;
-  align-items: center;
+  text-align: center;
 }
 
 td { 
@@ -184,5 +185,18 @@ p:nth-of-type(2) {
     min-height: auto;
     padding: 20px;
     border-radius: 16px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  th, td {
+    padding: 6px;
+    font-size: 14px;
   }
 }
