@@ -1,25 +1,3 @@
-// import { useAuth } from "../context/AuthContext";
-
-// const Dashboard = () => {
-//   const { user, logout } = useAuth();
-
-//   return (
-//     <div className="card-dashboard">
-//       <h1>Вітаю, {user.name}</h1>
-//       <p>Статус: {user.role === "teacher" ? "Викладач" : "Учень"}</p>
-
-//       {user.role === "teacher" && (
-//         <p>Тільки викладач бачить цей текст</p>
-//       )}
-
-//       <button onClick={logout}>Вийти</button>
-//     </div>
-//   );
-// };
-
-// export default Dashboard;
-
-
 import LessonWrapper from "../components/LessonWrapper";
 import { useAuth } from "../context/AuthContext";
 
@@ -36,7 +14,7 @@ const Dashboard = () => {
       )}
 
       <LessonWrapper id="lesson1">
-        <div className="lesson">
+        <div className="lesson table-scroll">
           <h2>Урок 1</h2>
           <p>Якщо буква в транскрипці пишеться з великої літери, то це наголос, приклад: жО = жó</p>
           <table>

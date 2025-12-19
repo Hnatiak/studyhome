@@ -22,20 +22,7 @@ const LessonWrapper = ({ id, children }) => {
   if (user.role === "student" && !isOpen) return null;
 
   return (
-    <div className="lesson-wrapper" style={{ 
-      marginBottom: "20px", 
-      padding: "25px", 
-      border: "1px solid rgba(255,255,255,0.1)",
-      borderRadius: "20px",
-      background: "rgba(255,255,255,0.03)",
-      display: "flex",
-      flexDirection: "column",
-      alignItems: "center",
-      gap: "20px",
-      position: "relative",
-      transform: "translateZ(1px)" 
-    }}>
-      
+    <div className="lesson-wrapper">
       {user.role === "teacher" && (
         <button
           onClick={toggleAccess}

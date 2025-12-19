@@ -16,7 +16,7 @@ body {
 }
 
 
-table {
+/* table {
   border-collapse: collapse;
   width: 100%;
   color: #fff;
@@ -37,6 +37,28 @@ td {
 }
 
 td:nth-of-type(4) { 
+  text-align: left;
+} */
+
+.table-scroll {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #fff;
+  padding: 8px;
+  text-align: center;
+  white-space: normal;
+}
+
+td:nth-of-type(4) {
   text-align: left;
 }
 
@@ -68,6 +90,20 @@ td:nth-of-type(4) {
 .dashboard-content {
   width: 100%;
   max-width: 1400px;
+}
+
+.lesson-wrapper {
+  margin-bottom: 20px;
+  padding: 25px;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 20px;
+  background: rgba(255,255,255,0.03);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+  transform: translateZ(1px);
 }
 
 @media (hover: hover) {
@@ -164,6 +200,10 @@ p:nth-of-type(2) {
   button {
     font-size: 15px;
   }
+
+  .lesson-wrapper {
+    padding: 12px;
+  }
 }
 
 @media (max-width: 1400px) {
@@ -188,15 +228,70 @@ p:nth-of-type(2) {
   }
 }
 
-@media screen and (max-width: 600px) {
+/* @media screen and (max-width: 600px) {
   table {
     display: block;
     overflow-x: auto;
-    white-space: nowrap;
   }
 
   th, td {
     padding: 6px;
+    font-size: 14px;
+  }
+} */
+
+/* @media screen and (min-width: 600px) {
+  .card-dashboard {
+    width: 100%;
+    overflow-x: hidden;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  table {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  th, td {
+    padding: 6px;
+    font-size: 14px;
+  }
+} */
+
+/* @media screen and (max-width: 600px) {
+  .table-scroll {
+    margin: 0 -12px;
+  }
+
+  th, td {
+    font-size: 13px;
+    padding: 6px;
+  }
+} */
+
+
+@media (max-width: 600px) {
+  .card-dashboard {
+    width: 100%;
+    overflow-x: hidden; /* приховує зайвий скрол */
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  table {
+    display: block;
+    width: 100%;
+    max-width: 100%; /* важливо */
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; /* плавний скрол на мобільних */
+    white-space: nowrap;
+  }
+
+  th, td {
+    padding: 2px;
     font-size: 14px;
   }
 }
