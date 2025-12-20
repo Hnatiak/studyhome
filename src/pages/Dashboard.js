@@ -1,6 +1,7 @@
 import LessonWrapper from "../components/LessonWrapper";
 import { useAuth } from "../context/AuthContext";
 import StartTestButton from "../components/StartTestButton";
+import lesson1 from '../video-lesson/video-lesson-1.mp4';
 
 const Dashboard = () => {
     const { user, logout } = useAuth();
@@ -15,7 +16,7 @@ const Dashboard = () => {
       )}
 
       <LessonWrapper id="lesson1">
-        <div className="lesson table-scroll">
+        <div className="table-scroll">
           <h2>Урок 1</h2>
           <p>Якщо буква в транскрипці пишеться з великої літери, то це наголос, приклад: жО = жó</p>
           <table>
@@ -74,7 +75,25 @@ const Dashboard = () => {
           </table>
         </div>
         <br/>
+        <div style={{ position: "relative", paddingBottom: "56.25%", height: 0, overflow: "hidden", maxWidth: "100%" }}>
+          <video
+            controls
+            controlsList="nodownload" 
+            style={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "100%",
+            }}
+          >
+            <source src={lesson1} type="video/mp4" />
+            Ваш браузер не підтримує відео.
+          </video>
+        </div>
+        <br/>
         <StartTestButton lessonId="lesson-1" />
+        <br/>
       </LessonWrapper>
 
       <LessonWrapper id="lesson2">
