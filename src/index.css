@@ -13,32 +13,8 @@ body {
   color: #fff;
   perspective: 1200px;
   padding: 16px;
+  -webkit-user-select: none;
 }
-
-
-/* table {
-  border-collapse: collapse;
-  width: 100%;
-  color: #fff;
-  table-layout: auto;
-}
-
-th {
-  border: 1px solid #fff;
-  padding: 8px;
-  text-align: center;
-}
-
-td { 
-  border: 1px solid #fff;
-  padding: 8px;
-  text-align: center;
-  vertical-align: middle;
-}
-
-td:nth-of-type(4) { 
-  text-align: left;
-} */
 
 .table-scroll {
   width: 100%;
@@ -228,19 +204,7 @@ p:nth-of-type(2) {
   }
 }
 
-/* @media screen and (max-width: 600px) {
-  table {
-    display: block;
-    overflow-x: auto;
-  }
-
-  th, td {
-    padding: 6px;
-    font-size: 14px;
-  }
-} */
-
-/* @media screen and (min-width: 600px) {
+@media (max-width: 600px) {
   .card-dashboard {
     width: 100%;
     overflow-x: hidden;
@@ -249,44 +213,11 @@ p:nth-of-type(2) {
   }
 
   table {
+    display: block;
     width: 100%;
     max-width: 100%;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-  }
-
-  th, td {
-    padding: 6px;
-    font-size: 14px;
-  }
-} */
-
-/* @media screen and (max-width: 600px) {
-  .table-scroll {
-    margin: 0 -12px;
-  }
-
-  th, td {
-    font-size: 13px;
-    padding: 6px;
-  }
-} */
-
-
-@media (max-width: 600px) {
-  .card-dashboard {
-    width: 100%;
-    overflow-x: hidden; /* приховує зайвий скрол */
-    padding: 20px;
-    box-sizing: border-box;
-  }
-
-  table {
-    display: block;
-    width: 100%;
-    max-width: 100%; /* важливо */
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch; /* плавний скрол на мобільних */
     white-space: nowrap;
   }
 

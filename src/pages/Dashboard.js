@@ -1,5 +1,6 @@
 import LessonWrapper from "../components/LessonWrapper";
 import { useAuth } from "../context/AuthContext";
+import StartTestButton from "../components/StartTestButton";
 
 const Dashboard = () => {
     const { user, logout } = useAuth();
@@ -72,6 +73,8 @@ const Dashboard = () => {
             </tbody>
           </table>
         </div>
+        <br/>
+        <StartTestButton lessonId="lesson-1" />
       </LessonWrapper>
 
       <LessonWrapper id="lesson2">

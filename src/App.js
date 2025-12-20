@@ -3,6 +3,8 @@ import { AuthProvider } from "./context/AuthContext";
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 import ProtectedRoute from "./components/ProtectedRoute";
+import TestRoom from "./pages/TestRoom";
+import TestResult from "./pages/TestResult";
 
 function App() {
   return (
@@ -16,6 +18,24 @@ function App() {
             element={
               <ProtectedRoute>
                 <Dashboard />
+              </ProtectedRoute>
+            }
+          />
+
+          <Route
+            path="/test/:lessonId"
+            element={
+              <ProtectedRoute>
+                <TestRoom />
+              </ProtectedRoute>
+            }
+          />
+
+          <Route
+            path="/test-result"
+            element={
+              <ProtectedRoute>
+                <TestResult />
               </ProtectedRoute>
             }
           />
