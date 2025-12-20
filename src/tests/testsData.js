@@ -144,10 +144,10 @@ export const testsData = {
     {
       question: "Він прийшов вчора. Який займенник?",
       options: [
-        { text: "On", correct: true },
+        { text: "On", correct: false },
         { text: "Nous", correct: false },
         { text: "Tu", correct: false },
-        { text: "Il", correct: false },
+        { text: "Il", correct: true },
       ]
     },
     {
