@@ -13,7 +13,7 @@ const Dashboard = () => {
 
   return (
     <div className="card-dashboard">
-      <h1>Вітаю, {user.name}</h1>
+      <h1>Вітаю {user.name}</h1>
       <p>Статус: {user.role === "teacher" ? "Викладач" : "Учень"}</p>
 
       {user.role === "teacher" && (

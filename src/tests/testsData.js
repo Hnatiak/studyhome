@@ -1,5 +1,5 @@
 export const testsData = {
-  "lesson-1": [
+  "lesson1": [
     {
       question: "Як сказати 'Я' французькою?",
       options: [
@@ -179,7 +179,7 @@ export const testsData = {
     }
   ],
 
-  "lesson-2": [
+  "lesson2": [
     {
       question: "Je suis",
       options: [
