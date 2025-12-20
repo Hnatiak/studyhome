@@ -1,7 +1,6 @@
 import LessonWrapper from "../components/LessonWrapper";
 import { useAuth } from "../context/AuthContext";
 import StartTestButton from "../components/StartTestButton";
-import lesson1 from '../video-lesson/video-lesson-1.mp4';
 
 const Dashboard = () => {
     const { user, logout } = useAuth();
