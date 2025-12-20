@@ -199,12 +199,15 @@ p:nth-of-type(2) {
 @media (max-width: 600px) {
   .card-dashboard {
     min-height: auto;
-    padding: 20px;
+    /* padding: 20px; */
     border-radius: 16px;
   }
 }
 
 @media (max-width: 600px) {
+  .lesson-wrapper {
+    padding: 12px;
+  }
   .card-dashboard {
     width: 100%;
     overflow-x: hidden;
@@ -212,17 +215,28 @@ p:nth-of-type(2) {
     box-sizing: border-box;
   }
 
-  table {
+  /* table {
     display: block;
     width: 100%;
     max-width: 100%;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     white-space: nowrap;
-  }
+  } */
 
   th, td {
     padding: 2px;
     font-size: 12px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  table th {
+    font-size: 12px; /* менший шрифт на мобільних */
+    white-space: nowrap; /* запобігає переносу на інший рядок */
+  }
+  table td {
+    font-size: 14px; /* трохи більший, щоб залишався читабельним */
   }
 }

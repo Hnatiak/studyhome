@@ -1,9 +1,12 @@
+import React, { useState } from "react";
 import LessonWrapper from "../components/LessonWrapper";
 import { useAuth } from "../context/AuthContext";
 import StartTestButton from "../components/StartTestButton";
 
 const Dashboard = () => {
   const { user, logout } = useAuth();
+  const [lesson1Open, setLesson1Open] = useState(true);
+  const [lesson2Open, setLesson2Open] = useState(true);
 
   const hasAccess = (lessonId) => {
     if (!user) return false;
@@ -21,6 +24,22 @@ const Dashboard = () => {
       )}
       {hasAccess("lesson1") && (
         <LessonWrapper id="lesson1">
+          <button
+            onClick={() => setLesson1Open(!lesson1Open)}
+            style={{
+              display: "flex",
+              alignItems: "center",
+              marginBottom: "10px",
+              cursor: "pointer",
+              background: "none",
+              border: "none",
+              fontSize: "16px",
+            }}
+          >
+            {lesson1Open ? "▼" : "►"} Урок 1 - Відмінювання займенників
+          </button>
+          {lesson1Open && (
+          <div>
           <div className="table-scroll">
             <h2>Урок 1 - Відмінювання займенників</h2>
             <p>Якщо буква в транскрипці пишеться з великої літери, то це наголос, приклад: жО = жó</p>
@@ -28,9 +47,9 @@ const Dashboard = () => {
               <thead>
                 <tr>
                   <th>Французька</th>
-                  <th>Транскрипція</th>
-                  <th>Українська</th>
-                  <th>Примітка</th>
+                  <th>Транскр</th>
+                  <th>Переклад</th>
+                  <th>Додаток</th>
                 </tr>
               </thead>
               <tbody>
@@ -98,12 +117,29 @@ const Dashboard = () => {
           </div>
           <br/>
           <StartTestButton lessonId="lesson1" />
-          <br/>
-        </LessonWrapper>
+        </div>
+          )}
+      </LessonWrapper>
       )}
 
       {hasAccess("lesson2") && (
         <LessonWrapper id="lesson2">
+          <button
+            onClick={() => setLesson2Open(!lesson2Open)}
+            style={{
+              display: "flex",
+              alignItems: "center",
+              marginBottom: "10px",
+              cursor: "pointer",
+              background: "none",
+              border: "none",
+              fontSize: "16px",
+            }}
+          >
+            {lesson2Open ? "▼" : "►"} Урок 2 - Дієслово être (Бути) і avoir (Мати)
+          </button>
+          {lesson2Open && (
+            <div>
           <div className="table-scroll">
             <h2>Урок 2 - Дієслово être (Бути) і avoir (Мати)</h2>
             <table style={{ textAlign: "left" }}>
@@ -162,7 +198,7 @@ const Dashboard = () => {
 
             </table>
           </div>
-          <br/>
+          <br/><br/>
           <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0 }}>
             <iframe
               src="https://www.youtube.com/embed/iPmaxRu843g"
@@ -219,7 +255,8 @@ const Dashboard = () => {
           </div>
           <br/>
           <StartTestButton lessonId="lesson2" />
-          <br/>
+          </div>
+          )}
         </LessonWrapper>
       )}
 

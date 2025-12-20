@@ -4,7 +4,7 @@ const StartTestButton = ({ lessonId }) => {
   const navigate = useNavigate();
 
   return (
-    <button onClick={() => navigate(`/test/${lessonId}`)}>
+    <button onClick={() => navigate(`/test/${lessonId}`)} style={{ marginBottom: "15px" }}>
       Пройти тест
     </button>
   );

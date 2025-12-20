@@ -38,16 +38,5 @@ export const users = [
       lesson2: true,
       lesson3: false,
     },
-  },
-  {
-    name: "Тестер",
-    username: "tester123",
-    password: "tester123",
-    role: "student",
-    lessonAccess: {
-      lesson1: true,
-      lesson2: false,
-      lesson3: false,
-    },
-  },
+  }
 ];
