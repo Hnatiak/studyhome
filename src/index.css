@@ -30,12 +30,16 @@ table {
 th, td {
   border: 1px solid #fff;
   padding: 8px;
-  text-align: center;
   white-space: normal;
 }
 
 td:nth-of-type(4) {
   text-align: left;
+}
+
+.red {
+  color: red;
+  font-weight: bold;
 }
 
 .card,
@@ -219,6 +223,6 @@ p:nth-of-type(2) {
 
   th, td {
     padding: 2px;
-    font-size: 14px;
+    font-size: 12px;
   }
 }

@@ -181,12 +181,194 @@ export const testsData = {
 
   "lesson-2": [
     {
-      question: "Що таке useState?",
+      question: "Je suis",
       options: [
-        { text: "Хук для маршрутизації", correct: false },
-        { text: "Хук для стану", correct: true },
-        { text: "CSS властивість", correct: false },
-        { text: "Бібліотека", correct: false }
+        { text: "Я маю", correct: false },
+        { text: "Ти є", correct: false },
+        { text: "Він є", correct: false },
+        { text: "Я є", correct: true }
+      ]
+    },
+    {
+      question: "Nous sommes",
+      options: [
+        { text: "Ми маємо", correct: false },
+        { text: "Ми є", correct: true },
+        { text: "Вони є", correct: false },
+        { text: "Ви є", correct: false }
+      ]
+    },
+    {
+      question: "Ils ont",
+      options: [
+        { text: "Вони є", correct: false },
+        { text: "Ми маємо", correct: false },
+        { text: "Вони мають", correct: true },
+        { text: "Ви маєте", correct: false }
+      ]
+    },
+    {
+      question: "Я маю собаку. Яке дієслово потрібно використати?",
+      options: [
+        { text: "avoir", correct: true },
+        { text: "être", correct: false },
+      ]
+    },
+    {
+      question: "Ми є українці. Яке дієслово потрібно використати?",
+      options: [
+        { text: "avoir", correct: false },
+        { text: "être", correct: true }
+      ]
+    },
+    {
+      question: "Tu ___ étudiant. (Ти є студент)",
+      options: [
+        { text: "as", correct: false },
+        { text: "es", correct: true },
+        { text: "est", correct: false },
+        { text: "sommes", correct: false }
+      ]
+    },
+    {
+      question: "Nous ___ une maison. (Ми маємо дім)",
+      options: [
+        { text: "sommes", correct: false },
+        { text: "avons", correct: true },
+        { text: "êtes", correct: false },
+        { text: "ont", correct: false }
+      ]
+    },
+    {
+      question: "Вони є щасливі (heureux). Який варіант правильний?",
+      options: [
+        { text: "Ils sont heureux", correct: true },
+        { text: "Ils ont heureux", correct: false },
+        { text: "Ils es heureux", correct: false },
+        { text: "Ils avez heureux", correct: false }
+      ]
+    },
+    {
+      question: "Tu ___ amoureux. (Ти є закоханий)",
+      options: [
+        { text: "sommes", correct: false },
+        { text: "avons", correct: false },
+        { text: "es", correct: true },
+        { text: "est", correct: false }
+      ]
+    },
+    {
+      question: "Ви маєте. Як буде французькою?",
+      options: [
+        { text: "Vous êtes", correct: false },
+        { text: "Vous ont", correct: false },
+        { text: "Vous es", correct: false },
+        { text: "Vous avez", correct: true },
+      ]
+    },
+    {
+      question: "On est",
+      options: [
+        { text: "Ми маємо", correct: false },
+        { text: "Ми є", correct: true },
+        { text: "Вони мають", correct: false }
+      ]
+    }
+  ],
+
+  "lesson-2-1": [
+    {
+      question: "Je suis",
+      options: [
+        { text: "Я маю", correct: false },
+        { text: "Ти є", correct: false },
+        { text: "Він є", correct: false },
+        { text: "Я є", correct: true }
+      ]
+    },
+    {
+      question: "Nous sommes",
+      options: [
+        { text: "Ми маємо", correct: false },
+        { text: "Ми є", correct: true },
+        { text: "Вони є", correct: false },
+        { text: "Ви є", correct: false }
+      ]
+    },
+    {
+      question: "Ils ont",
+      options: [
+        { text: "Вони є", correct: false },
+        { text: "Ми маємо", correct: false },
+        { text: "Вони мають", correct: true },
+        { text: "Ви маєте", correct: false }
+      ]
+    },
+    {
+      question: "Я маю собаку. Яке дієслово потрібно використати?",
+      options: [
+        { text: "avoir", correct: true },
+        { text: "être", correct: false },
+      ]
+    },
+    {
+      question: "Ми є українці. Яке дієслово потрібно використати?",
+      options: [
+        { text: "avoir", correct: false },
+        { text: "être", correct: true }
+      ]
+    },
+    {
+      question: "Tu ___ étudiant. (Ти є студент)",
+      options: [
+        { text: "as", correct: false },
+        { text: "es", correct: true },
+        { text: "est", correct: false },
+        { text: "sommes", correct: false }
+      ]
+    },
+    {
+      question: "Nous ___ une maison. (Ми маємо дім)",
+      options: [
+        { text: "sommes", correct: false },
+        { text: "avons", correct: true },
+        { text: "êtes", correct: false },
+        { text: "ont", correct: false }
+      ]
+    },
+    {
+      question: "Вони є щасливі (heureux). Який варіант правильний?",
+      options: [
+        { text: "Ils sont heureux", correct: true },
+        { text: "Ils ont heureux", correct: false },
+        { text: "Ils es heureux", correct: false },
+        { text: "Ils avez heureux", correct: false }
+      ]
+    },
+    {
+      question: "Tu ___ amoureux. (Ти є закоханий)",
+      options: [
+        { text: "sommes", correct: false },
+        { text: "avons", correct: false },
+        { text: "es", correct: true },
+        { text: "est", correct: false }
+      ]
+    },
+    {
+      question: "Ви маєте. Як буде французькою?",
+      options: [
+        { text: "Vous êtes", correct: false },
+        { text: "Vous ont", correct: false },
+        { text: "Vous es", correct: false },
+        { text: "Vous avez", correct: true },
+      ]
+    },
+    {
+      question: "On est",
+      options: [
+        { text: "Ми маємо", correct: false },
+        { text: "Ми є", correct: true },
+        { text: "Вони мають", correct: false }
       ]
     }
   ]
