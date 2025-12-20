@@ -29,13 +29,13 @@ export const users = [
     },
   },
   {
-    name: "Олена",
-    username: "student2",
-    password: "stud456",
+    name: "Діана",
+    username: "KDiana09",
+    password: "ee#f22D#W",
     role: "student",
     lessonAccess: {
       lesson1: true,
-      lesson2: true,
+      lesson2: false,
       lesson3: false,
     },
   },
