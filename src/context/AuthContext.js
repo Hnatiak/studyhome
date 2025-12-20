@@ -10,7 +10,9 @@ export const AuthProvider = ({ children }) => {
 
   const login = (username, password) => {
     const foundUser = users.find(
-      (u) => u.username === username && u.password === password
+      (u) =>
+        u.username === username.trim() &&
+        u.password === password.trim()
     );
 
     if (!foundUser) return false;
