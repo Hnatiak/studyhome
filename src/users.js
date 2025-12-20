@@ -35,7 +35,7 @@ export const users = [
     role: "student",
     lessonAccess: {
       lesson1: true,
-      lesson2: false,
+      lesson2: true,
       lesson3: false,
     },
   },
