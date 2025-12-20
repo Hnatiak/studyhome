@@ -73,9 +73,9 @@ export const testsData = {
     {
       question: "Як сказати 'Вони (чоловіки і жінки)' французькою?",
       options: [
-        { text: "Ils / Elles", correct: true },
+        { text: "Ils", correct: true },
         { text: "Nous", correct: false },
-        { text: "On", correct: false },
+        { text: "Elles", correct: false },
         { text: "Je", correct: false },
       ]
     },
@@ -135,8 +135,8 @@ export const testsData = {
     {
       question: "Вони співають пісню (чоловіки та жінки). Який займенник?",
       options: [
-        { text: "Ils / Elles", correct: true },
-        { text: "On", correct: false },
+        { text: "Ils", correct: true },
+        { text: "Elles", correct: false },
         { text: "Vous", correct: false },
         { text: "Je", correct: false },
       ]
