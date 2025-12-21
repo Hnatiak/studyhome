@@ -26,6 +26,7 @@ export const users = [
       lesson1: true,
       lesson2: false,
       lesson3: false,
+      lesson4: false,
     },
   },
   {
@@ -37,6 +38,7 @@ export const users = [
       lesson1: true,
       lesson2: true,
       lesson3: false,
+      lesson4: false,
     },
   }
 ];
