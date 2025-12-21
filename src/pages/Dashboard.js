@@ -7,6 +7,7 @@ const Dashboard = () => {
   const { user, logout } = useAuth();
   const [lesson1Open, setLesson1Open] = useState(true);
   const [lesson2Open, setLesson2Open] = useState(true);
+  const [lesson3Open, setLesson3Open] = useState(true);
 
   const hasAccess = (lessonId) => {
     if (!user) return false;
@@ -255,6 +256,179 @@ const Dashboard = () => {
           </div>
           <br/>
           <StartTestButton lessonId="lesson2" />
+          </div>
+          )}
+        </LessonWrapper>
+      )}
+
+
+      {hasAccess("lesson3") && (
+        <LessonWrapper id="lesson3">
+          <button
+            onClick={() => setLesson3Open(!lesson3Open)}
+            style={{
+              display: "flex",
+              alignItems: "center",
+              marginBottom: "10px",
+              cursor: "pointer",
+              background: "none",
+              border: "none",
+              fontSize: "16px",
+            }}
+          >
+            {lesson3Open ? "▼" : "►"} Урок 3 - Перша група дієслів
+          </button>
+          {lesson3Open && (
+          <div>
+            <div className="table-scroll">
+              <h2>Урок 3 — Перша група дієслів (-ER)</h2>
+              <p>Цікаво знати: приблизно 90% французьких дієслів належать до першої групи і закінчуються на <b>-ER</b>.</p>
+              <table style={{ textAlign: "left" }}>
+                <thead style={{ textAlign: "center" }}>
+                  <tr>
+                    <th>Особа</th>
+                    <th>Закінчення</th>
+                    <th>Приклад: parler</th>
+                    <th>Вимова</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Je</td>
+                    <td><span className="red">-e</span></td>
+                    <td>je parl<span className="red">e</span></td>
+                    <td>парль</td>
+                  </tr>
+                  <tr>
+                    <td>Tu</td>
+                    <td><span className="red">-es</span></td>
+                    <td>tu parl<span className="red">es</span></td>
+                    <td>парль</td>
+                  </tr>
+                  <tr>
+                    <td>Il / Elle / On</td>
+                    <td><span className="red">-e</span></td>
+                    <td>il parl<span className="red">e</span></td>
+                    <td>парль</td>
+                  </tr>
+                  <tr>
+                    <td>Nous</td>
+                    <td><span className="red">-ons</span></td>
+                    <td>nous parl<span className="red">ons</span></td>
+                    <td>парлОн</td>
+                  </tr>
+                  <tr>
+                    <td>Vous</td>
+                    <td><span className="red">-ez</span></td>
+                    <td>vous parl<span className="red">ez</span></td>
+                    <td>парлЕ</td>
+                  </tr>
+                  <tr>
+                    <td>Ils / Elles</td>
+                    <td><span className="red">-ent</span></td>
+                    <td>ils parl<span className="red">ent</span></td>
+                    <td>парль</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <br/><br/>
+            <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0 }}>
+            <iframe
+              src="https://www.youtube.com/embed/34PFFDjC6ec"
+              title="Урок 1 - Франц мова"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              style={{
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                width: '100%',
+                height: '100%',
+              }}
+            ></iframe>
+          </div>
+          <div>
+            <h3>Важливі моменти:</h3>
+            <ul style={{ textAlign: "left" }}>
+              <li>✔️ Перша група — всі дієслова на <b>-ER</b></li>
+              <li>❌ <b>aller</b> — виняток (це III група)</li>
+              <li>🔇 Закінчення <b>-e, -es, -ent</b> <span className="red">не вимовляються</span></li>
+              <li>👂 Реально чути тільки <b>nous</b> і <b>vous</b></li>
+            </ul>
+            <h3>Інші дієслова першої групи (-ER):</h3>
+            <ul style={{ textAlign: "left" }}>
+              <li>parler (парлИ) — говорити</li>
+              <li>aimer (емИ) — любити</li>
+              <li>écouter (екутИ) — слухати</li>
+              <li>travailler (травайИ) — працювати</li>
+              <li>jouer (жуИ) — грати</li>
+              <li>regarder (регардИ) — дивитися</li>
+              <li>chercher (шершИ) — шукати</li>
+              <li>trouver (трувИ) — знаходити</li>
+              <li>penser (пансИ) — думати</li>
+              <li>donner (донИ) — давати</li>
+              <li>marcher (маршИ) — ходити</li>
+              <li>étudier (етюдИ) — вчитися</li>
+              <li>habiter (абітИ) — жити (деякий час)</li>
+              <li>téléphoner (телефонИ) — телефонувати</li>
+              <li>demander (дьомандИ) — запитувати</li>
+              <li>arriver (арівИ) — прибувати</li>
+              <li>entrer (антрИ) — входити</li>
+              <li>rester (рестИ) — залишатися</li>
+              <li>quitter (кітИ) — залишати</li>
+              <li>commencer (комонсИ) — починати</li>
+              <li>continuer (контінюИ) — продовжувати</li>
+              <li>terminer (термінИ) — закінчувати</li>
+              <li>préparer (препарИ) — готувати</li>
+              <li>expliquer (експлікИ) — пояснювати</li>
+              <li>répéter (репетИ) — повторювати</li>
+              <li>utiliser (ютілізИ) — використовувати</li>
+              <li>organiser (організИ) — організовувати</li>
+              <li>visiter (візітИ) — відвідувати</li>
+              <li>voyager (вояжИ) — подорожувати</li>
+              <li>habiller (абійИ) — одягати</li>
+              <li>porter (портИ) — носити</li>
+              <li>montrer (монтрИ) — показувати</li>
+              <li>changer (шонжИ) — міняти</li>
+              <li>payer (пейИ) — платити</li>
+              <li>fermer (фермИ) — закривати</li>
+              <li>commander (комондИ) — замовляти</li>
+              <li>réserver (резервИ) — бронювати</li>
+              <li>garder (ґардИ) — зберігати</li>
+              <li>partager (партажИ) — ділитися</li>
+              <li>rentrer (ронтрИ) — повертатися</li>
+              <li>tourner (турнИ) — повертати</li>
+              <li>tomber (томбИ) — падати</li>
+              <li>passer (пасИ) — проходити / проводити час</li>
+              <li>arrêter (аретИ) — зупиняти</li>
+              <li>espérer (есперИ) — сподіватися</li>
+              <li>oublier (убліИ) — забувати</li>
+              <li>appeler (аполИ) — дзвонити / називати</li>
+              <li>réaliser (реалізИ) — усвідомлювати / виконувати</li>
+            </ul>
+            <div className="rule-box">
+              <h4>Правило для дієслів на <span className="red">-GER</span></h4>
+
+              <p>
+                Якщо дієслово <b>першої групи (-ER)</b> закінчується на
+                <b> -ger</b>, то у формі <b>nous</b> в теперішньому часі <b>після літери g обовʼязково додається e</b>,
+                а потім стандартне закінчення <b>-ons</b>.
+              </p>
+
+              <p className="example">
+                manger → nous <span className="red">mangeons</span><br />
+                voyager → nous <span className="red">voyageons</span>
+              </p>
+
+              <p className="note">
+                ❗ Це потрібно, щоб вимова залишалась <b>[ж]</b>, а не <b>[г]</b>.
+              </p>
+            </div>
+          </div>
+          <br/>
+          <StartTestButton lessonId="lesson3" />
           </div>
           )}
         </LessonWrapper>
