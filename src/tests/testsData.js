@@ -554,5 +554,186 @@ export const testsData = {
         { text: "-ent", correct: false }
       ]
     }
+  ],
+
+  "lesson4": [
+    {
+      question: "Яке закінчення має дієслово II групи для je?",
+      options: [
+        { text: "-it", correct: false },
+        { text: "-is", correct: true },
+        { text: "-issez", correct: false },
+        { text: "-issons", correct: false }
+      ]
+    },
+    {
+      question: "Яке закінчення має дієслово II групи для tu?",
+      options: [
+        { text: "-it", correct: false },
+        { text: "-is", correct: true },
+        { text: "-issons", correct: false },
+        { text: "-issez", correct: false }
+      ]
+    },
+    {
+      question: "Яке закінчення має дієслово II групи для il / elle / on?",
+      options: [
+        { text: "-issons", correct: false },
+        { text: "-it", correct: true },
+        { text: "-is", correct: false },
+        { text: "-issez", correct: false }
+      ]
+    },
+    {
+      question: "Яке закінчення має дієслово II групи для nous?",
+      options: [
+        { text: "-is", correct: false },
+        { text: "-issez", correct: false },
+        { text: "-issons", correct: true },
+        { text: "-issent", correct: false }
+      ]
+    },
+    {
+      question: "Яке закінчення має дієслово II групи для vous?",
+      options: [
+        { text: "-issez", correct: true },
+        { text: "-issons", correct: false },
+        { text: "-is", correct: false },
+        { text: "-issent", correct: false }
+      ]
+    },
+    {
+      question: "Яке закінчення має дієслово II групи для ils / elles?",
+      options: [
+        { text: "-it", correct: false },
+        { text: "-issez", correct: false },
+        { text: "-issent", correct: true },
+        { text: "-issons", correct: false }
+      ]
+    },
+    {
+      question: "finir → je ___",
+      options: [
+        { text: "finit", correct: false },
+        { text: "finissons", correct: false },
+        { text: "finis", correct: true },
+        { text: "finissez", correct: false }
+      ]
+    },
+    {
+      question: "choisir → nous ___",
+      options: [
+        { text: "choisissons", correct: true },
+        { text: "choisit", correct: false },
+        { text: "choisies", correct: false },
+        { text: "choisissez", correct: false }
+      ]
+    },
+    {
+      question: "grandir → ils ___",
+      options: [
+        { text: "grandissent", correct: true },
+        { text: "grandissons", correct: false },
+        { text: "grandit", correct: false },
+        { text: "grandis", correct: false }
+      ]
+    },
+    {
+      question: "réussir → tu ___",
+      options: [
+        { text: "réussissons", correct: false },
+        { text: "réussis", correct: true },
+        { text: "réussit", correct: false },
+        { text: "réussissez", correct: false }
+      ]
+    },
+    {
+      question: "applaudir → vous ___",
+      options: [
+        { text: "applaudissons", correct: false },
+        { text: "applaudit", correct: false },
+        { text: "applaudis", correct: false },
+        { text: "applaudissez", correct: true }
+      ]
+    },
+    {
+      question: "obéir → il ___",
+      options: [
+        { text: "obéit", correct: true },
+        { text: "obéissons", correct: false },
+        { text: "obéissent", correct: false },
+        { text: "obéis", correct: false }
+      ]
+    },
+    {
+      question: "rougir → nous ___",
+      options: [
+        { text: "rougissons", correct: true },
+        { text: "rougit", correct: false },
+        { text: "rougissent", correct: false },
+        { text: "rougis", correct: false }
+      ]
+    },
+    {
+      question: "maigrir → je ___",
+      options: [
+        { text: "maigris", correct: true },
+        { text: "maigrissons", correct: false },
+        { text: "maigrissez", correct: false },
+        { text: "maigrit", correct: false }
+      ]
+    },
+    {
+      question: "réfléchir → ils ___",
+      options: [
+        { text: "réfléchissent", correct: true },
+        { text: "réfléchissons", correct: false },
+        { text: "réfléchit", correct: false },
+        { text: "réfléchissez", correct: false }
+      ]
+    },
+    {
+      question: "guérir → tu ___",
+      options: [
+        { text: "guérit", correct: false },
+        { text: "guéris", correct: true },
+        { text: "guérissons", correct: false },
+        { text: "guérissez", correct: false }
+      ]
+    },
+    {
+      question: "grossir → nous ___",
+      options: [
+        { text: "grossissons", correct: true },
+        { text: "grossissez", correct: false },
+        { text: "grossis", correct: false },
+        { text: "grossit", correct: false }
+      ]
+    },
+    {
+      question: "investir → vous ___",
+      options: [
+        { text: "investissez", correct: true },
+        { text: "investissons", correct: false },
+        { text: "investis", correct: false },
+        { text: "investit", correct: false }
+      ]
+    },
+    {
+      question: "Яке твердження правильне про дієслова II групи?",
+      options: [
+        { text: "Всі вони регулярні і мають -iss- у nous", correct: true },
+        { text: "Всі вони нерегулярні", correct: false },
+        { text: "Всі вони закінчуються на -er", correct: false },
+        { text: "Всі вони без правил", correct: false }
+      ]
+    },
+    {
+      question: "courir належить до другої групи?",
+      options: [
+        { text: "Так, це II група", correct: false },
+        { text: "Ні, це III група", correct: true }
+      ]
+    }
   ]
 };

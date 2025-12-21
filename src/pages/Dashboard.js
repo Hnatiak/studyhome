@@ -5,9 +5,10 @@ import StartTestButton from "../components/StartTestButton";
 
 const Dashboard = () => {
   const { user, logout } = useAuth();
-  const [lesson1Open, setLesson1Open] = useState(true);
-  const [lesson2Open, setLesson2Open] = useState(true);
-  const [lesson3Open, setLesson3Open] = useState(true);
+  const [lesson1Open, setLesson1Open] = useState(false);
+  const [lesson2Open, setLesson2Open] = useState(false);
+  const [lesson3Open, setLesson3Open] = useState(false);
+  const [lesson4Open, setLesson4Open] = useState(false);
 
   const hasAccess = (lessonId) => {
     if (!user) return false;
@@ -410,18 +411,15 @@ const Dashboard = () => {
             </ul>
             <div className="rule-box">
               <h4>Правило для дієслів на <span className="red">-GER</span></h4>
-
               <p>
-                Якщо дієслово <b>першої групи (-ER)</b> закінчується на
-                <b> -ger</b>, то у формі <b>nous</b> в теперішньому часі <b>після літери g обовʼязково додається e</b>,
+                Якщо дієслово <b>першої групи (-ER)</b> закінчується на<br/>
+                <b> -ger</b>, то у формі <b>nous</b> в теперішньому часі <b>після літери g обовʼязково додається e</b>,<br/>
                 а потім стандартне закінчення <b>-ons</b>.
               </p>
-
               <p className="example">
                 manger → nous <span className="red">mangeons</span><br />
                 voyager → nous <span className="red">voyageons</span>
               </p>
-
               <p className="note">
                 ❗ Це потрібно, щоб вимова залишалась <b>[ж]</b>, а не <b>[г]</b>.
               </p>
@@ -429,6 +427,127 @@ const Dashboard = () => {
           </div>
           <br/>
           <StartTestButton lessonId="lesson3" />
+          </div>
+          )}
+        </LessonWrapper>
+      )}
+
+      {hasAccess("lesson4") && (
+        <LessonWrapper id="lesson4">
+          <button
+            onClick={() => setLesson4Open(!lesson4Open)}
+            style={{
+              display: "flex",
+              alignItems: "center",
+              marginBottom: "10px",
+              cursor: "pointer",
+              background: "none",
+              border: "none",
+              fontSize: "16px",
+            }}
+          >
+          {lesson4Open ? "▼" : "►"} Урок 4 - Друга група дієслів
+          </button>
+          {lesson4Open && (
+          <div>
+            <div className="table-scroll">
+              <h2>Урок 4 — Друга група дієслів (-IR)</h2>
+              <table style={{ textAlign: "left" }}>
+                <thead style={{ textAlign: "center" }}>
+                  <tr>
+                    <th>Особа</th>
+                    <th>Закінчення</th>
+                    <th>Приклад: finir</th>
+                    <th>Вимова</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Je</td>
+                    <td><span className="red">-is</span></td>
+                    <td>je fin<span className="red">is</span></td>
+                    <td>фіні</td>
+                  </tr>
+                  <tr>
+                    <td>Tu</td>
+                    <td><span className="red">-is</span></td>
+                    <td>tu fin<span className="red">is</span></td>
+                    <td>фіні</td>
+                  </tr>
+                  <tr>
+                    <td>Il / Elle / On</td>
+                    <td><span className="red">-it</span></td>
+                    <td>il fin<span className="red">it</span></td>
+                    <td>фіні</td>
+                  </tr>
+                  <tr>
+                    <td>Nous</td>
+                    <td><span className="red">-issons</span></td>
+                    <td>nous fin<span className="red">issons</span></td>
+                    <td>фінісон</td>
+                  </tr>
+                  <tr>
+                    <td>Vous</td>
+                    <td><span className="red">-issez</span></td>
+                    <td>vous fin<span className="red">issez</span></td>
+                    <td>фінісе</td>
+                  </tr>
+                  <tr>
+                    <td>Ils / Elles</td>
+                    <td><span className="red">-issent</span></td>
+                    <td>ils fin<span className="red">issent</span></td>
+                    <td>фініс</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <br/>
+            <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0 }}>
+            <iframe
+              src="https://www.youtube.com/embed/SZ6ZpFDiIZo"
+              title="Урок 1 - Франц мова"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              style={{
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                width: '100%',
+                height: '100%',
+              }}
+            ></iframe>
+          </div>
+          <div>
+            <h3>Важливі моменти для другої групи дієслів (-IR)</h3>
+            <ul style={{ textAlign: "left" }}>
+              <li>✔️ Друга група — дієслова, що закінчуються на <b>-ir</b> та мають <b>-iss-</b> у формі <b>nous</b> (finir → nous finissons)</li>
+              <li>❌ Дієслова на -ir без -iss-, наприклад <b>courir, partir, sortir</b>, належать до III групи</li>
+              <li>📌 Всі дієслова II групи <b>регулярні</b> — закінчення однакові для всіх: -is, -is, -it, -issons, -issez, -issent</li>
+              <li>💡 Легко впізнати по формі <b>nous</b> в présent: якщо є <b>-issons</b>, це II група</li>
+              <li>❗ Дієслово <b>choisir</b> — класичний приклад II групи</li>
+            </ul>
+
+            <h3>Приклади дієслів другої групи (-IR, з -iss-)</h3>
+            <ul style={{ textAlign: "left" }}>
+              <li>finir (фінІр) — закінчувати</li>
+              <li>choisir (шуазІр) — вибирати / вирішувати</li>
+              <li>grandir (ґрандІр) — виростати / рости</li>
+              <li>réussir (реюсІр) — досягати успіху</li>
+              <li>applaudir (аплодІр) — аплодувати</li>
+              <li>obéir (обеІр) — слухатися</li>
+              <li>rougir (ружІр) — червоніти</li>
+              <li>maigrir (мегрІр) — худнути</li>
+              <li>réfléchir (рефлешІр) — роздумувати / мислити</li>
+              <li>investir (анвестІр) — інвестувати</li>
+              <li>guérir (ґерІр) — одужувати</li>
+              <li>agir (ажІр) — діяти</li>
+              <li>remplir (ромплІр) — наповнювати</li>
+              <li>grossir (ґросІр) — товстіти</li>
+            </ul>
+          </div>
+          <br/>
+          <StartTestButton lessonId="lesson4" />
           </div>
           )}
         </LessonWrapper>
