@@ -37,7 +37,7 @@ export const users = [
     lessonAccess: {
       lesson1: true,
       lesson2: true,
-      lesson3: false,
+      lesson3: true,
       lesson4: false,
     },
   }
